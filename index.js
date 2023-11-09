@@ -5,7 +5,17 @@ const app = express()
 const PORT = 3001
 
 app.use(express.json())
-app.use(morgan('tiny'))
+
+morgan.token('data', (request) => {
+  const data = JSON.stringify(request.body)
+  return JSON.stringify(request.body) === '{}'
+    ? " "
+    : data
+})
+
+app.use(morgan(
+  ':method :url :status :res[content-length] - :response-time ms :data'
+))
 
 let persons = [
   {
