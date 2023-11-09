@@ -8,7 +8,7 @@ app.use(express.json())
 
 morgan.token('data', (request) => {
   const data = JSON.stringify(request.body)
-  return JSON.stringify(request.body) === '{}'
+  return data === '{}'
     ? " "
     : data
 })
