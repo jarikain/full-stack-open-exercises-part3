@@ -7,4 +7,4 @@ For this part of the course, it is recommended to use separate repository. My ma
 - [x] 3.3
 - [x] 3.4
 - [x] 3.5
-- [ ] 3.6
+- [x] 3.6
