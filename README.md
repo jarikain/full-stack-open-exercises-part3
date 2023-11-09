@@ -5,6 +5,6 @@ For this part of the course, it is recommended to use separate repository. My ma
 - [x] 3.1
 - [x] 3.2
 - [x] 3.3
-- [ ] 3.4
+- [x] 3.4
 - [ ] 3.5
 - [ ] 3.6
