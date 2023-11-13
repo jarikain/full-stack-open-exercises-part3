@@ -13,3 +13,8 @@ For this part of the course, it is recommended to use separate repository. My ma
 [3.7 - 3.8](https://fullstackopen.com/en/part3/node_js_and_express#exercises-3-7-3-8)
 - [x] 3.7
 - [x] 3.8
+
+[3.9 - 3.11](https://fullstackopen.com/en/part3/deploying_app_to_internet#exercises-3-9-3-11)
+- [x] 3.9
+- [ ] 3.10
+- [ ] 3.11
