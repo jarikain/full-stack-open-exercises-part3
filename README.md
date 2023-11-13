@@ -1,6 +1,8 @@
 # Full Stack Open Part 3 Exercises
 For this part of the course, it is recommended to use separate repository. My main repository for the exercises is [here](https://github.com/jarikain/full-stack-open-exercises)
 
+Link for the backend app: https://fso-express-phonebook-app.fly.dev/api/persons
+
 ## Completed exercises:
 [3.1 - 3.6](https://fullstackopen.com/en/part3/node_js_and_express#exercises-3-1-3-6)
 - [x] 3.1
@@ -16,5 +18,5 @@ For this part of the course, it is recommended to use separate repository. My ma
 
 [3.9 - 3.11](https://fullstackopen.com/en/part3/deploying_app_to_internet#exercises-3-9-3-11)
 - [x] 3.9
-- [ ] 3.10
+- [x] 3.10
 - [ ] 3.11
