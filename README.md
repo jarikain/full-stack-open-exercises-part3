@@ -23,5 +23,3 @@ Link for the app: https://fso-express-phonebook-app.fly.dev/
 
 [3.12](https://fullstackopen.com/en/part3/saving_data_to_mongo_db#exercise-3-12)
 - [x] 3.12
-
-Note: Exercise 3.12 requires environment variable MONGO_USERNAME to be set
