@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const username = process.env.MONGO_USERNAME
 const [, , password, name, number] = process.argv
 
 if (process.argv.length < 3) {
@@ -8,13 +7,12 @@ if (process.argv.length < 3) {
 }
 
 const url =
-    `mongodb+srv://${username}:${password}@cluster0.l1m99u3.mongodb.net/phonebookApp?retryWrites=true&w=majority`
+    `mongodb+srv://fullstack-jkdev:${password}@cluster0.l1m99u3.mongodb.net/phonebookApp?retryWrites=true&w=majority`
 
 mongoose.set('strictQuery', false)
 mongoose.connect(url)
     .catch(() => {
-      console.log('Could not establish database connection. ' +
-          'Remember to add MONGO_USERNAME environment variable and give password as argument')
+      console.log('Could not establish database connection. Remember give password as an argument')
       process.exit(1)
     })
 
