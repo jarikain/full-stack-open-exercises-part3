@@ -57,10 +57,8 @@ app.delete('/api/persons/:id', (request, response, next) => {
 })
 
 app.post('/api/persons', (request, response, next) => {
-  const newPerson = new Person({
-    name: request.body.name,
-    number: request.body.number
-  })
+  const {name, number} = request.body
+  const newPerson = new Person({name, number})
 
   newPerson
     .save()
