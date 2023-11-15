@@ -32,4 +32,4 @@ Link for the app: https://fso-express-phonebook-app.fly.dev/
 - [x] 3.15
 - [x] 3.16
 - [x] 3.17
-- [ ] 3.18
+- [x] 3.18
