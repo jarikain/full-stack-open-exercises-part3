@@ -11,10 +11,10 @@ const url =
 
 mongoose.set('strictQuery', false)
 mongoose.connect(url)
-    .catch(() => {
-      console.log('Could not establish database connection. Remember give password as an argument')
-      process.exit(1)
-    })
+  .catch(() => {
+    console.log('Could not establish database connection. Remember give password as an argument')
+    process.exit(1)
+  })
 
 const personSchema = new mongoose.Schema({
   name: String,
@@ -23,26 +23,26 @@ const personSchema = new mongoose.Schema({
 const Person = mongoose.model('Person', personSchema)
 
 if (name && number) {
-  const person = new Person({name, number})
+  const person = new Person({ name, number })
 
   person.save()
-      .then(() => {
-        console.log(`added ${name} number ${number} to phonebook`)
-      })
-      .finally(() => {
-        mongoose.connection.close()
-      })
+    .then(() => {
+      console.log(`added ${name} number ${number} to phonebook`)
+    })
+    .finally(() => {
+      mongoose.connection.close()
+    })
 
 } else {
   Person.find({})
-      .then(result => {
-        console.log('phonebook:')
+    .then(result => {
+      console.log('phonebook:')
 
-        result.forEach(person => {
-          console.log(person.name, person.number)
-        })
+      result.forEach(person => {
+        console.log(person.name, person.number)
       })
-      .finally(() => {
-        mongoose.connection.close()
-      })
+    })
+    .finally(() => {
+      mongoose.connection.close()
+    })
 }

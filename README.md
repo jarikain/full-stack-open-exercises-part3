@@ -38,3 +38,6 @@ Link for the app: https://fso-express-phonebook-app.fly.dev/
 - [x] 3.19
 - [x] 3.20
 - [x] 3.21
+
+[3.22](https://fullstackopen.com/en/part3/validation_and_es_lint#exercise-3-22)
+- [x] 3.22

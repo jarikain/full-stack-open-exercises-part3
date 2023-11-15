@@ -9,7 +9,8 @@
     "build:ui": "rm -rf dist && cd ../full-stack-open-exercises/part2/phonebook/ && npm run build && cp -r dist ../../../full-stack-open-exercises-part3/",
     "deploy": "fly deploy",
     "deploy:full": "npm run build:ui && npm run deploy",
-    "logs:prod": "fly logs"
+    "logs:prod": "fly logs",
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "@flydotio/dockerfile": "^0.4.10",
+    "eslint": "^8.53.0",
     "nodemon": "^3.0.1"
   }
 }

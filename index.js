@@ -16,7 +16,7 @@ app.use(express.static('dist'))
 morgan.token('data', (request) => {
   const data = JSON.stringify(request.body)
   return data === '{}'
-    ? " "
+    ? ' '
     : data
 })
 
@@ -57,8 +57,8 @@ app.delete('/api/persons/:id', (request, response, next) => {
 })
 
 app.post('/api/persons', (request, response, next) => {
-  const {name, number} = request.body
-  const newPerson = new Person({name, number})
+  const { name, number } = request.body
+  const newPerson = new Person({ name, number })
 
   newPerson
     .save()
@@ -67,29 +67,29 @@ app.post('/api/persons', (request, response, next) => {
 })
 
 app.put('/api/persons/:id', (request, response, next) => {
-  const {name, number} = request.body
+  const { name, number } = request.body
 
   Person
     .findByIdAndUpdate(
       request.params.id,
-      {name, number},
-      {new: true, runValidators: true, context: 'query'})
+      { name, number },
+      { new: true, runValidators: true, context: 'query' })
     .then(updatedPerson => response.json(updatedPerson))
     .catch(error => next(error))
 })
 
 const unknownEndpointsHandler = (request, response) => {
-  response.status(404).send({error: 'unknown endpoint'})
+  response.status(404).send({ error: 'unknown endpoint' })
 }
 app.use(unknownEndpointsHandler)
 
 const errorHandler = (error, request, response, next) => {
   if (error.name === 'CastError') {
-    return response.status(400).send({error: 'malformed id'})
+    return response.status(400).send({ error: 'malformed id' })
   }
 
   if (error.name === 'ValidationError') {
-    return response.status(400).send({error: error.message})
+    return response.status(400).send({ error: error.message })
   }
 
   next(error)
