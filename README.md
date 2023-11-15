@@ -31,5 +31,5 @@ Link for the app: https://fso-express-phonebook-app.fly.dev/
 [3.15-3.18](https://fullstackopen.com/en/part3/saving_data_to_mongo_db#exercises-3-15-3-18)
 - [x] 3.15
 - [x] 3.16
-- [ ] 3.17
+- [x] 3.17
 - [ ] 3.18
